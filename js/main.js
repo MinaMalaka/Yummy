@@ -327,6 +327,7 @@ let enanbleUser = false,
 function showContact() {
     searchContent.innerHTML = ''
     document.getElementById('meal-content').innerHTML =`
+    <div id="contact-inputs">
     <div class="col-md-6 mb-4">
             <input type="text" class="form-control bg-white text-black mb-2" placeholder="Enter Your Name" id="name" oninput="check()">
             <p class="text-center rec d-none" id="namePara">Special characters and numbers not allowed</p>
@@ -358,6 +359,7 @@ function showContact() {
 
         </div>
         <button type="button" class="btn btn-outline-danger  m-auto" disabled  id="button" onclick="sub()">Submit</button>
+        </div>
     `
     document.getElementById('contact-inputs').innerHTML = content
     close()

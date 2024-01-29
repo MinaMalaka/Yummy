@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loading position-fixed top-0 start-0 end-0 bottom-0 bg-black ">
+        <i class="fa fa-spinner fa-spin fa-6x text-white"></i>
+    </div>
+        <aside class=" d-flex justify-content-between position-fixed top-0 bottom-0" >
+        <div class="urls" id="sidebar">
+            <ul class="list-unstyled ms-4">
+                <li class="mt-5 mb-3 position-relative text-white" id="search">Search</li>
+                <li class="mb-3 position-relative" id="Categories">Categories</li>
+                <li class="mb-3 position-relative" id="area">Area</li>
+                <li class="mb-3 position-relative" id="ingredients">Ingredients</li>
+                <li class="mb-3 position-relative" id="contact"> Contact Us</li>
+
+            </ul>
+            <div class="footer ms-4">
+                <ul class="list-unstyled d-flex">
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="me-2"><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+                <p class="text-white">Copyright Â© 2019 All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+        <div class="slide bg-white">
+            <img class="logo mt-5" src="./images/logo.png" alt="">
+            <div class="mark"><i class="fa-solid open-close-icon fa-2x fa-x d-none"  id="close"></i>
+                <i class="fa-solid open-close-icon fa-2x fa-align-justify " id="open"></i>
+            </div>
+            <div class="link mb-5">
+                <a href="#" class="text-black"><i class="fa-solid fa-globe"></i></a>
+                <a href="#" class="text-black"><i class="fa-solid fa-share-nodes"></i></a>
+
+            </div>
+        </div>
+    </aside>
+    <div class="container Search w-75 h-100" id="search-content">
+        
+    </div>
+    <div class="loading-in position-absolute top-0 start-0 end-0 bottom-0 bg-black " style="display: none;">
+            <i class="fa fa-spinner fa-spin fa-6x text-white"></i>
+        </div>
+    <div class="container my-5" id="meal-orig">
+        
+        <div class="row " id="meal-content">
+           
+        </div>
+    </div>
+    
+    <div class="container form">
+        <div class="row" id="contact-inputs">
+        
+    </div>
+
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

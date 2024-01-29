@@ -38,6 +38,7 @@ async function meals() {
     displayCategory(result.categories)
     close()
     searchContent.innerHTML = ''
+    document.getElementById('contact-inputs').innerHTML = ''
     $(".loading-in").fadeOut(500)
 }
 function displayCategory(obj) {
@@ -84,6 +85,7 @@ $('#Categories').click(meals);
 // search fns
 function catchSearch() {
     document.getElementById('meal-content').innerHTML = ''
+    document.getElementById('contact-inputs').innerHTML = ''
     searchContent.innerHTML = `<div class="row mt-3">
     <div class="col-md-6">
         <input type="text" class="form-control bg-transparent text-white" placeholder="Search By Name" oninput="searchMeals(this.value)">
@@ -125,6 +127,7 @@ $('#search').click(catchSearch);
 //area tab fns
 async function mealArea() {
     searchContent.innerHTML = ''
+    document.getElementById('contact-inputs').innerHTML = ''
     let mealsDetails = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
     let result = await mealsDetails.json();
     displayMealArea(result.meals)
@@ -243,6 +246,7 @@ async function mealDetail(id) {
 function areaMealDetails(obj) {
     close()
     searchContent.innerHTML = ''
+    document.getElementById('contact-inputs').innerHTML = ''
     $(".loading-in").fadeIn()
     let cartona = ''
     for (let i = 1; i <= 20; i++) {
@@ -296,6 +300,7 @@ function areaMealDetails(obj) {
 
 async function ingredient() {
     searchContent.innerHTML = ''
+    document.getElementById('contact-inputs').innerHTML = ''
     $(".loading-in").fadeIn()
     let mealsDetails = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`);
     let result = await mealsDetails.json();
@@ -326,9 +331,8 @@ let enanbleUser = false,
     enanbleRepass = false;
 function showContact() {
     searchContent.innerHTML = ''
-    document.getElementById('meal-content').innerHTML =`
-    <div id="contact-inputs">
-    <div class="col-md-6 mb-4">
+    document.getElementById('meal-content').innerHTML =''
+        let content=`    <div class="col-md-6 mb-4">
             <input type="text" class="form-control bg-white text-black mb-2" placeholder="Enter Your Name" id="name" oninput="check()">
             <p class="text-center rec d-none" id="namePara">Special characters and numbers not allowed</p>
             
@@ -359,7 +363,6 @@ function showContact() {
 
         </div>
         <button type="button" class="btn btn-outline-danger  m-auto" disabled  id="button" onclick="sub()">Submit</button>
-        </div>
     `
     document.getElementById('contact-inputs').innerHTML = content
     close()

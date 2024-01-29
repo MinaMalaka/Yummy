@@ -326,8 +326,7 @@ let enanbleUser = false,
     enanbleRepass = false;
 function showContact() {
     searchContent.innerHTML = ''
-    document.getElementById('meal-content').innerHTML = ''
-    let content = `
+    document.getElementById('meal-content').innerHTML =`
     <div class="col-md-6 mb-4">
             <input type="text" class="form-control bg-white text-black mb-2" placeholder="Enter Your Name" id="name" oninput="check()">
             <p class="text-center rec d-none" id="namePara">Special characters and numbers not allowed</p>
